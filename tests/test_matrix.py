@@ -184,6 +184,9 @@ class TestMultiply(unittest.TestCase):
         self.assertEqual(multiply.multiply(
             [[1, 2, 3], [2, 1, 1]], [[1], [2], [3]]), [[14], [7]])
 
+        self.assertEqual(multiply.multiply(
+            [[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[1, 2], [3, 4], [5, 6]]), [[22, 28], [49, 64], [76, 100]])
+
 
 class TestRotateImage(unittest.TestCase):
     """[summary]

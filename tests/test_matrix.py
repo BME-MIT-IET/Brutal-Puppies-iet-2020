@@ -52,7 +52,7 @@ class TestCopyTransform(unittest.TestCase):
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[7, 4, 1], [8, 5, 2], [9, 6, 3]])
 
         self.assertEqual(copy_transform.rotate_clockwise(
-            [[3, 6, 9], [2, 5, 6], [1, 4, 7]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+            [[3, 6, 9], [2, 5, 8], [1, 4, 7]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
         self.assertEqual(copy_transform.rotate_counterclockwise(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[3, 6, 9], [2, 5, 8], [1, 4, 7]])

@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ 3.6, 3.8]
+        python-version: [ 3.6, 3.7]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,7 +32,9 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: install requirements
-      run: pip install -r test_requirements.txt
+      run: |
+        pip install -r test_requirements.txt
+        pip install tox-gh-actions
     - name: before script
       run: |
         black --check . || true
@@ -43,5 +45,5 @@ jobs:
     - name: Check python install package
       run: |
         pip install -e .
-        tox -e py
+        python -m tox
         pip uninstall -y algorithms

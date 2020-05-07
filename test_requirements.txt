@@ -5,3 +5,4 @@ nose
 pytest
 tox
 black
+tox-gh-actions

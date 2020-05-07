@@ -1,27 +1,22 @@
-# This is a basic workflow to help you get started with Actions
+# This is the Github Action version of the original travis.yml. We thought it would be a nice task to migrate the CI workflow to GitHub actions.
 
 name: Build CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
-  # This workflow contains a single job called "build"
   build:
     name: Build CI 
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ 3.6, 3.7]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -30,19 +25,22 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    # Runs a single command using the runners shell
-    - name: install requirements
+    - name: Install requirements
       run: |
         pip install -r test_requirements.txt
-        pip install tox-gh-actions
-    - name: before script
+        
+    #Running checks before installation
+    #     black is to check if files would need some reformatting
+    #     stopping the build if there are Python sytax errors or undefined names
+    #     exit-zero treats all errors as warnings, The github editor is 127 chars wide
+    - name: Checks before install
       run: |
         black --check . || true
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics 
 
     # Runs a set of commands using the runners shell
-    - name: Check python install package
+    - name: Check Package install
       run: |
         pip install -e .
         python -m tox

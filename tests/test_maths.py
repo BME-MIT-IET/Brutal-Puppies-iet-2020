@@ -19,7 +19,7 @@ from algorithms.maths import (
     cosine_similarity,
     find_order,
     find_primitive_root,
-    alice_private_key, alice_public_key, bob_private_key, bob_public_key, alice_shared_key, bob_shared_key, diffie_hellman_key_exchange
+    diffie_hellman_key_exchange
 )
 
 import unittest
@@ -112,6 +112,7 @@ class TestGcd(unittest.TestCase):
         self.assertEqual(4, gcd_bit(8, 12))
         self.assertEqual(1, gcd(13, 17))
 
+
 class TestGenerateStroboGrammatic(unittest.TestCase):
     """[summary]
     Test for the file generate_strobogrammatic.py
@@ -154,8 +155,8 @@ class TestModularExponential(unittest.TestCase):
 
     def test_modular_exponential(self):
         self.assertEqual(1, modular_exponential(5, 117, 19))
-        self.assertEqual(pow(1243, 65321, 10**9 + 7),
-                         modular_exponential(1243, 65321, 10**9 + 7))
+        self.assertEqual(pow(1243, 65321, 10 ** 9 + 7),
+                         modular_exponential(1243, 65321, 10 ** 9 + 7))
         self.assertEqual(1, modular_exponential(12, 0, 78))
         self.assertRaises(ValueError, modular_exponential, 12, -2, 455)
 
@@ -245,10 +246,9 @@ class TestRSA(unittest.TestCase):
     """
 
     def test_encrypt_decrypt(self):
-
         self.assertEqual(7, decrypt(encrypt(7, 23, 143), 47, 143))
 
-    # def test_key_generator(self):  # this test takes a while!
+    # def test_key_generator(self):  -this test takes a while!
     #     for i in range(100):
     #         print("step {0}".format(i))
     #         n, e, d = generate_key(26)
@@ -287,7 +287,7 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(1, factorial(0))
         self.assertEqual(120, factorial(5))
         self.assertEqual(3628800, factorial(10))
-        self.assertEqual(637816310, factorial(34521, 10**9 + 7))
+        self.assertEqual(637816310, factorial(34521, 10 ** 9 + 7))
         self.assertRaises(ValueError, factorial, -42)
         self.assertRaises(ValueError, factorial, 42, -1)
 
@@ -295,7 +295,7 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(1, factorial_recur(0))
         self.assertEqual(120, factorial_recur(5))
         self.assertEqual(3628800, factorial_recur(10))
-        self.assertEqual(637816310, factorial_recur(34521, 10**9 + 7))
+        self.assertEqual(637816310, factorial_recur(34521, 10 ** 9 + 7))
         self.assertRaises(ValueError, factorial_recur, -42)
         self.assertRaises(ValueError, factorial_recur, 42, -1)
 
@@ -307,6 +307,7 @@ class TestHailstone(unittest.TestCase):
     Arguments:
         unittest {[type]} -- [description]
     """
+
     def test_hailstone(self):
         self.assertEqual([8, 4, 2, 1], hailstone.hailstone(8))
         self.assertEqual([10, 5, 16, 8, 4, 2, 1], hailstone.hailstone(10))
@@ -319,6 +320,7 @@ class TestCosineSimilarity(unittest.TestCase):
     Arguments:
         unittest {[type]} -- [description]
     """
+
     def test_cosine_similarity(self):
         vec_a = [1, 1, 1]
         vec_b = [-1, -1, -1]
@@ -335,12 +337,13 @@ class TestFindPrimitiveRoot(unittest.TestCase):
     Arguments:
         unittest {[type]} -- [description]
     """
+
     def test_find_primitive_root_simple(self):
         self.assertListEqual([0], find_primitive_root(1))
         self.assertListEqual([2, 3], find_primitive_root(5))
         self.assertListEqual([], find_primitive_root(24))
         self.assertListEqual([2, 5, 13, 15, 17, 18, 19, 20, 22, 24, 32, 35], find_primitive_root(37))
-        
+
 
 class TestFindOrder(unittest.TestCase):
     """[summary]
@@ -349,6 +352,7 @@ class TestFindOrder(unittest.TestCase):
     Arguments:
         unittest {[type]} -- [description]
     """
+
     def test_find_order_simple(self):
         self.assertEqual(1, find_order(1, 1))
         self.assertEqual(6, find_order(3, 7))
@@ -363,12 +367,13 @@ class TestDiffieHellmanKeyExchange(unittest.TestCase):
     Arguments:
         unittest {[type]} -- [description]
     """
-    def test_find_order_simple(self):
+
+    def test_diffie_hellman_key_exchange(self):
         self.assertFalse(diffie_hellman_key_exchange(3, 6))
         self.assertTrue(diffie_hellman_key_exchange(3, 353))
         self.assertFalse(diffie_hellman_key_exchange(5, 211))
         self.assertTrue(diffie_hellman_key_exchange(11, 971))
 
+
 if __name__ == "__main__":
     unittest.main()
-

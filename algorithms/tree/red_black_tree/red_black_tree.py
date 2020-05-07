@@ -241,7 +241,7 @@ class RBTree:
                     node.parent.color = 0
                     node_brother.right.color = 0
                     self.left_rotate(node.parent)
-                node = self.root
+                    node = self.root
             else:
                 node_brother = node.parent.left
                 if node_brother.color == 1:
@@ -263,7 +263,7 @@ class RBTree:
                     node.parent.color = 0
                     node_brother.left.color = 0
                     self.right_rotate(node.parent)
-                node = self.root
+                    node = self.root
         node.color = 0
 
     def inorder(self):

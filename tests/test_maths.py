@@ -368,7 +368,7 @@ class TestDiffieHellmanKeyExchange(unittest.TestCase):
         unittest {[type]} -- [description]
     """
 
-    def test_find_order_simple(self):
+    def test_diffie_hellman_key_exchange(self):
         self.assertFalse(diffie_hellman_key_exchange(3, 6))
         self.assertTrue(diffie_hellman_key_exchange(3, 353))
         self.assertFalse(diffie_hellman_key_exchange(5, 211))

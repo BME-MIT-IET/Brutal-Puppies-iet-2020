@@ -241,7 +241,7 @@ class RBTree:
                     node.parent.color = 0
                     node_brother.right.color = 0
                     self.left_rotate(node.parent)
-                node = self.root
+                    node = self.root
                 break
             else:
                 node_brother = node.parent.left
@@ -264,7 +264,7 @@ class RBTree:
                     node.parent.color = 0
                     node_brother.left.color = 0
                     self.right_rotate(node.parent)
-                node = self.root
+                    node = self.root
                 break
         node.color = 0
 

@@ -140,6 +140,7 @@ class TestCholeskyMatrixDecomposition(unittest.TestCase):
                              [[5, 1.2, 0.3, -0.6], [1.2, 6, -0.4, 0.9],
                               [0.3, -0.4, 8, 1.7], [-0.6, 0.9, 1.7, 10]]))
 
+
 class TestInversion(unittest.TestCase):
     """[summary]
     Test for the file matrix_inversion.py
@@ -169,7 +170,6 @@ class TestInversion(unittest.TestCase):
         self.assertEqual(matrix_inversion.invert_matrix(m6), [[Fraction(40, 53), Fraction(-31, 53), Fraction(-5, 53)],
                                                               [Fraction(-16, 53), Fraction(23, 53), Fraction(2, 53)],
                                                               [Fraction(13, 53), Fraction(-22, 53), Fraction(5, 53)]])
-
 
 
 class TestMultiply(unittest.TestCase):
@@ -323,6 +323,7 @@ class TestSudokuValidator(unittest.TestCase):
                     [3, 0, 0, 4, 8, 1, 1, 7, 9]
                 ]))
 
+
 class TestSumSubSquares(unittest.TestCase):
     """[summary]
     Test for the file sum_sub_squares.py
@@ -338,6 +339,7 @@ class TestSumSubSquares(unittest.TestCase):
            [5, 5, 5, 5, 5]]
         self.assertEqual(sum_sub_squares.sum_sub_squares(mat, 3),
                          [[18, 18, 18], [27, 27, 27], [36, 36, 36]])
+
 
 if __name__ == "__main__":
     unittest.main()

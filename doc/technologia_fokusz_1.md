@@ -14,7 +14,7 @@ A _diffie_hellman_key_exchange.py_ és a _find_primitve_root_simple.py_ is felha
 
 Ezek után a SonarCloud is elfogadta a változtatásokat. 
 
-![](fiuc_success.png)
+![](./images/fiuc_success.png)
 
 
 

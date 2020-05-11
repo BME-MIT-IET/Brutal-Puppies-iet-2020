@@ -12,5 +12,13 @@ Ebben a workflowban, először `pytest` segítségével lefuttatja a teszteket, 
 
 Létrehozott fájl: `.github/workflows/main.yml`
 
+![Codecov comment in PR](./images/codecov_comment.png)
+
 ## Statikus kódminőség ellenőrzés SonarCloud-dal
 Ehhez az ellenőrzéshez hozzáadtuk a SonarCloud alkalmazást a repository-hoz, és ez automatikusan futtatja a kódminőségellenőrzést a fájlokon. Az eredményét megnézhetjük a [SonarCloud honlapján](http://sonarcloud.io), illetve a Pull requesteknél kommentben is közzéteszi. 
+
+![Sonar Cloud comment in PR](./images/sonarcloud_comment.png)
+
+
+## PR ellenőrzések:
+![PR checks](./images/actions.png)

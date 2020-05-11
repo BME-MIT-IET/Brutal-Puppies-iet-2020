@@ -2,12 +2,12 @@
 # 2. házi feladat - Ellenőrzés
 
 ## Csapat: Brutal Puppies
-    Südi Beáta - bea0113
-    Kránitz Felícia - feliciakranitz
-    Oszlányi-Salacz Csenge - csinga24
+    Südi Beáta (bea0113)
+    Kránitz Felícia (feliciakranitz)
+    Oszlányi-Salacz Csenge (csinga24)
 
 ## A projektünk: 
-    [algorithms (python)](https://github.com/keon/algorithms)
+[algorithms (python)](https://github.com/keon/algorithms)
 
 ## Az elvégzett feladatok:
  - Projekt megismerése, példakód, tesztek írása

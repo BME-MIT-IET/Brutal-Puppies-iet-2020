@@ -11,6 +11,7 @@
 
 ## Az elvégzett feladatok:
  - Projekt megismerése, példakód, tesztek írása
+   - [Példakód sorbarendezési algoritmusokra](sample_code_bea0113.md)
  - Technológia fókusz
     - [CI folyamatok beüzemelése](./technologia_fokusz_CI.md)
         - Automatikus build ellenőrzés áthelyezése Travis CI-ből GitHub Actions-be

@@ -1,9 +1,9 @@
 # Projekt megismerése
 ## Unit tesztek írása, kiegészítése (Matrix)
 
-A projekt nagyon sok függvényt tartalmaz, így miután elolvastam a README fájlt, és felületes végig néztem a mappákat és az egyes fájlokat, kiválasztottam egy elkülöníthető funkciót.
+A projekt nagyon sok függvényt tartalmaz, így miután elolvastam a README fájlt, és felületesen végig néztem a mappákat és az egyes fájlokat, kiválasztottam egy elkülöníthető funkciót.
 
-### Én a mátrixokkal foglalkozó függvényeket választott. (`.algorithms/matrix/`)
+### Én a mátrixokkal foglalkozó függvényeket választottam. (`.algorithms/matrix/`)
 
 Először átnéztem a mappa fájljait, végig jártam a függényeket. Ezek után megnéztem a hozzá tartozó unit teszteket is. (`.tests/test_matrix.py`)
 

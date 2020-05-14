@@ -1,26 +1,26 @@
 # Termék/felhasználó fókusz
 # BDD testing
 
-## A unit teszteken kívül is tesztelési lehetőségek, például a BDD (Behavior-Driven Development) tesztek, amik függvények viselkedését elemzik. Ezzel a módszerrel egy kicsit máshogy, másfajta hibákat fedezhetünk fel. 
+## A unit teszteken kívül is léteznek tesztelési lehetőségek, például a BDD (Behavior-Driven Development) tesztek, amik függvények viselkedését elemzik. Ezzel a módszerrel egy kicsit máshogy, másfajta hibákat fedezhetünk fel. 
 
 Miután alaposan utána jártam a BDD tesztelés működésének, letöltöttem a behave libaryt. (https://behave.readthedocs.io/en/latest/)
 
-3 függvényt választottam, amihet tesztet írtam: _matrix_inversion.py_, _pattern_match.py_ és a _linear_search.py_.
+3 függvényt választottam, amikhez tesztet írtam: _matrix_inversion.py_, _pattern_match.py_ és a _linear_search.py_.
 
 ## A viselkedésüket vizsgáltam, hogy hogyan reagálnak a függvények helyes illetve hibás bemenetekre.
 
-A _pattern_match.py_ és a _linear_search.py_ függvéyneknek hibás és helyes bemeneteket is megadtam. A helyes bemenetre a ellenőriztem, hogy a helyes kimenetet adják-e vissza. A hibás bemenetre pedig, hogy a megfelelő hibával térnek-e vissza. 
+A _pattern_match.py_ és a _linear_search.py_ függvényeknek hibás és helyes bemeneteket is megadtam. A helyes bemenetre a ellenőriztem, hogy a helyes kimenetet adják-e vissza. A hibás bemenetre pedig, hogy a megfelelő hibával térnek-e vissza. 
 
 ![](./images/bdd_pattern_fail.png)
 ![](./images/bdd_pattern_success.png)
 ![](./images/bdd_linear_fail.png)
 ![](./images/bdd_linear_success.png)
 
-A _matrix_inversion.py_ függvénynek csak hibás bemeneteke adtam meg, és azt vizsgáltam, hogy a megfelelő hivóba üzenetet adja-e vissza. Mivel a megfelelő bemeenetre adott válasz mátrisot már unit teszt ellenőrzi. 
+A _matrix_inversion.py_ függvénynek csak hibás bemeneteket adtam meg, és azt vizsgáltam, hogy a megfelelő hiba üzenetet adja-e vissza. Mivel a megfelelő bemenetre adott válasz mátrixot már unit teszt ellenőrzi. 
 
 ![](./images/bdd_matrix.png)
 
-A tesztek írásához alaposen meg kellett ismernek a működésüket, viselkedésüket, hogy olyan bemeneteket tudjak adni, ami a megfelelő hatást éri el.
+A tesztek írásához alaposan meg kellett ismernek a működésüket, viselkedésüket, hogy olyan bemeneteket tudjak adni, ami a megfelelő hatást éri el.
 
 ![](./images/bdd_success.png)
 

@@ -25,8 +25,12 @@ Innen is látszik, hogy mennyivel idő és teljesítmény igényesebbek a mátri
 
 ![](./images/vt_success.png)
 
+Létrehozott fájl: `.tests/test_volume_matrix.py`
+
 Először csak egy nagyobb függvényel vizsgáltam a különbséget, de Südi Beáta tanácsára mindegyik teszthez hozzáadtam még egy még nagyobb mátrixot, és így tényleg nagyon szépen látszanak már a függvények teljesítményei. 
 
-A másik problémám a kód duplikációval akadt, de miután a teljes mátrixokat kicseréltem generáló függvények segítségével, már ez sem okozott problémát. 
+A másik problémám a kód duplikációval akadt, de miután a teljes mátrixokat kicseréltem generáló függvények segítségével, már ez sem okozott problémát. Végül a SonarCloud sem jelzett hibát:
+
+![](./images/vt_sonar_success.png)
 
 

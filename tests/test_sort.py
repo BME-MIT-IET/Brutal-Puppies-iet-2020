@@ -99,6 +99,9 @@ class TestSuite(unittest.TestCase):
         self.assertEqual([1, 5, 23, 57, 65, 1232],
                         cocktail_shaker_sort([1, 5, 65, 23, 57, 1232]))
 
+    def test_cocktail_shaker_sort_empty(self):
+        self.assertEqual([], cocktail_shaker_sort([]))
+
 class TestTopSort(unittest.TestCase):
     def setUp(self):
         self.depGraph = {

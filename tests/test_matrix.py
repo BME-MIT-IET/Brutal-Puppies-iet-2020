@@ -51,14 +51,26 @@ class TestCopyTransform(unittest.TestCase):
         self.assertEqual(copy_transform.rotate_clockwise(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[7, 4, 1], [8, 5, 2], [9, 6, 3]])
 
+        self.assertEqual(copy_transform.rotate_clockwise(
+            [[3, 6, 9], [2, 5, 8], [1, 4, 7]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
         self.assertEqual(copy_transform.rotate_counterclockwise(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[3, 6, 9], [2, 5, 8], [1, 4, 7]])
+
+        self.assertEqual(copy_transform.rotate_counterclockwise(
+            [[7, 4, 1], [8, 5, 2], [9, 6, 3]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
         self.assertEqual(copy_transform.top_left_invert(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[1, 4, 7], [2, 5, 8], [3, 6, 9]])
 
+        self.assertEqual(copy_transform.top_left_invert(
+            [[1, 4, 7], [2, 5, 8], [3, 6, 9]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
         self.assertEqual(copy_transform.bottom_left_invert(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[9, 6, 3], [8, 5, 2], [7, 4, 1]])
+
+        self.assertEqual(copy_transform.bottom_left_invert(
+            [[9, 6, 3], [8, 5, 2], [7, 4, 1]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 
 class TestCroutMatrixDecomposition(unittest.TestCase):
@@ -128,6 +140,7 @@ class TestCholeskyMatrixDecomposition(unittest.TestCase):
                              [[5, 1.2, 0.3, -0.6], [1.2, 6, -0.4, 0.9],
                               [0.3, -0.4, 8, 1.7], [-0.6, 0.9, 1.7, 10]]))
 
+
 class TestInversion(unittest.TestCase):
     """[summary]
     Test for the file matrix_inversion.py
@@ -159,7 +172,6 @@ class TestInversion(unittest.TestCase):
                                                               [Fraction(13, 53), Fraction(-22, 53), Fraction(5, 53)]])
 
 
-
 class TestMultiply(unittest.TestCase):
     """[summary]
     Test for the file multiply.py
@@ -171,6 +183,9 @@ class TestMultiply(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(multiply.multiply(
             [[1, 2, 3], [2, 1, 1]], [[1], [2], [3]]), [[14], [7]])
+
+        self.assertEqual(multiply.multiply(
+            [[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[1, 2], [3, 4], [5, 6]]), [[22, 28], [49, 64], [76, 100]])
 
 
 class TestRotateImage(unittest.TestCase):
@@ -184,6 +199,9 @@ class TestRotateImage(unittest.TestCase):
     def test_rotate_image(self):
         self.assertEqual(rotate_image.rotate(
             [[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [[7, 4, 1], [8, 5, 2], [9, 6, 3]])
+
+        self.assertEqual(rotate_image.rotate(
+            [[3, 6, 9], [2, 5, 8], [1, 4, 7]]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 
 class TestSparseDotVector(unittest.TestCase):
@@ -305,6 +323,7 @@ class TestSudokuValidator(unittest.TestCase):
                     [3, 0, 0, 4, 8, 1, 1, 7, 9]
                 ]))
 
+
 class TestSumSubSquares(unittest.TestCase):
     """[summary]
     Test for the file sum_sub_squares.py
@@ -320,6 +339,7 @@ class TestSumSubSquares(unittest.TestCase):
            [5, 5, 5, 5, 5]]
         self.assertEqual(sum_sub_squares.sum_sub_squares(mat, 3),
                          [[18, 18, 18], [27, 27, 27], [36, 36, 36]])
+
 
 if __name__ == "__main__":
     unittest.main()

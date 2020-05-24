@@ -23,6 +23,7 @@
         - Sonar Cloud bugs
             - [Unreacheable code fix](./technologia_fokusz_1.md)
             - [Functions returns should not be invariant fix](./technologia_fokusz_2.md)
+            - [Red-Black Tree delete_fixup() bug](./Sonarcloud_bug_fix_rb_tree.md)
   - Termék/Felhasználói fókusz
     - [Volume testing mátrixokra](./termek_es_felhasznaloi_fokusz_1.md)
     - [Volume testing tömbökre](./termek_es_felhasznaloi_fokusz_3.md)

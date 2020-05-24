@@ -13,6 +13,7 @@
  - Projekt megismerése, példakód, tesztek írása
    - [Példakód sorbarendezési algoritmusokra](sample_code_bea0113.md)
    - [Tesztek írása a test_matrix.py unit tesztekhez](./tests_to_test_matrix.md)
+   - [Tesztek írása string algoritmusokhoz](./tests_for_string_algorithms.md)
  - Technológia fókusz
     - [CI folyamatok beüzemelése](./technologia_fokusz_CI.md)
         - Automatikus build ellenőrzés áthelyezése Travis CI-ből GitHub Actions-be
@@ -21,6 +22,8 @@
     - CI eszközök által talált hibák javítása
         - Sonar Cloud bugs
             - [Unreacheable code fix](./technologia_fokusz_1.md)
+            - [Functions returns should not be invariant fix](./technologia_fokusz_2.md)
   - Termék/Felhasználói fókusz
-    - [Volume testing](./termek_es_felhasznaloi_fokusz_1.md)
+    - [Volume testing mátrixokra](./termek_es_felhasznaloi_fokusz_1.md)
+    - [Volume testing tömbökre](./termek_es_felhasznaloi_fokusz_3.md)
     - [BDD tesztek](./termek_es_felhasznaloi_fokusz_2.md)

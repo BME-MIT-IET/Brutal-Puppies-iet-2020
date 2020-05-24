@@ -1,7 +1,7 @@
 # Termék/felhasználó fókusz
 # Volume testing
 
-## Tömbökre írt algoritmusok teljesítményét teszteltem. A függvényeknek különböző méretű beneeteket adtam, majd aa futási időt vizsgáltam.
+## Tömbökre írt algoritmusok teljesítményét teszteltem. A függvényeknek különböző méretű bemeneteket adtam, majd a futási időt vizsgáltam.
 
 A függvények tesztelése során először kisebb méretű tömbökkel próbálkoztam, azonban így sok esetben mérhetetlen volt az eredmény. Ezek után tízezer, illetve ennél nagyobb elemszámú tömböket hoztam létre tesztelés céljából, hogy a futási idők közötti különbség megfigyelhető legyen.
 
